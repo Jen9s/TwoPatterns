@@ -15,8 +15,20 @@ public class Context {
         }
     }
 
+    public Context(int floorNumber){
+        this.FloorNumber = floorNumber;
+        if(FloorNumber < 1){
+            System.out.println("We can't build this building that's why we build a one-story house.");
+            FloorNumber = 1;
+        }
+    }
+
     public void setFloorNumber(int floorNumber){
         this.FloorNumber = floorNumber;
+        if(FloorNumber < 1){
+            System.out.println("We can't build this building that's why we build a one-story house.");
+            FloorNumber = 1;
+        }
     }
 
     public int getFloorNumber(){
